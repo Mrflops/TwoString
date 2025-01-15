@@ -1,67 +1,47 @@
 <mujoco model="spirob">
-    <!-- set some defaults for units and lighting -->
     <compiler angle="radian" meshdir="C:\Users\secre\Documents\GitHub\TwoString\twoStringSTL"/>
- 
-    <!-- import our stl files -->
+
     <asset>
         <mesh file="TwoString1.STL" />
         <mesh file="TwoString2.STL" />
         <mesh file="TwoString3.STL" />
-        <mesh file="TwoString4.STL" />
-        <mesh file="TwoString5.STL" />
-        <mesh file="TwoString6.STL" />
-        <mesh file="TwoString7.STL" />
-        <mesh file="TwoString8.STL" />
-        <mesh file="TwoString9.STL" />
-        <mesh file="TwoString10.STL" />
     </asset>
- 
-    <!-- define our robot model -->
+
     <worldbody>
-        <!-- set up a light pointing down on the robot -->
         <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1" />
-        <!-- add a floor so we don't stare off into the abyss -->
         <geom name="floor" pos="0 0 0" size="1 1 1" type="plane" rgba="1 0.83 0.61 0.5"/>
-        <!-- the ABR Control Mujoco interface expects a hand mocap -->
- 
-        <!-- start building our model -->
+
         <body name="base" pos="0 0 0.1">
             <geom name="segment1" type="mesh" mesh="TwoString1" pos="0 0 0" contype="1" conaffinity="1"/>
-            <inertial pos="0 0 0" mass="0" diaginertia="0 0 0"/>
-            <site name="cable_anchor1" pos="0 -0.211567 0" size="0.01" rgba="1 0 0 1" />
-            <site name="cable2_anchor1" pos="0 0.211567 0" size="0.01" rgba="1 0 0 1" />
- 
-            <!-- nest each child piece inside the parent body tags -->
-            <body name="segment2" pos="0 0 0">
-                <!-- this joint connects link1 to the base -->
-                <joint name="joint2" type="ball" axis="1 0 0" pos="0 0 0" stiffness="150" damping="75"/>
- 
-                <geom name="segment2" type="mesh" mesh="TwoString2" pos="0 0 0" euler="0 0 0" contype="1" conaffinity="1"/>
-                <inertial pos="0 0 0" mass="0.5" diaginertia="1 1 1"/>
-                <site name="cable_anchor2" pos="0 0 0" size="0.01" rgba="1 0 0 1" />
-                <site name="cable2_anchor2" pos="0 0 0" size="0.01" rgba="1 0 0 1" />
+            <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+            <site name="cable_anchor1" pos="0 0.215724 0.004246" size="0.01" rgba="1 0 0 1"/>
+            <site name="cable2_anchor1" pos="0 -0.215724 0.004246" size="0.01" rgba="1 0 0 1"/>
 
-                <!-- nest each child piece inside the parent body tags -->
+            <body name="segment2" pos="0 0 0">
+                <joint name="joint2" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                <geom name="segment2" type="mesh" mesh="TwoString2" pos="0 0 0" contype="1" conaffinity="1"/>
+                <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                <site name="cable_anchor2" pos="0 0.196938 0.246226" size="0.01" rgba="1 0 0 1"/>
+                <site name="cable2_anchor2" pos="0 -0.196938 0.246226" size="0.01" rgba="1 0 0 1"/>
+
                 <body name="segment3" pos="0 0 0">
-                    <!-- this joint connects link1 to the base -->
-                    <joint name="joint3" type="ball" axis="1 0 0" pos="0 0 0" stiffness="150" damping="75"/>
- 
-                    <geom name="segment3" type="mesh" mesh="TwoString3" pos="0 0 0" euler="0 0 0" contype="1" conaffinity="1"/>
-                    <inertial pos="0 0 0" mass="0.5" diaginertia="1 1 1"/>
-                    <site name="cable_anchor3" pos="0 0 0" size="0.01" rgba="1 0 0 1" />
-                    <site name="cable2_anchor3" pos="0 0 0" size="0.01" rgba="1 0 0 1" />
+                    <joint name="joint3" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                    <geom name="segment3" type="mesh" mesh="TwoString3" pos="0 0 0" contype="1" conaffinity="1"/>
+                    <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                    <site name="cable_anchor3" pos="0 0.177578 0.489842" size="0.01" rgba="1 0 0 1"/>
+                    <site name="cable2_anchor3" pos="0 -0.177578 0.489842" size="0.01" rgba="1 0 0 1"/>
                 </body>
             </body>
         </body>
     </worldbody>
 
     <tendon>
-        <spatial name="cable1">
+        <spatial name="cable1" stiffness="250" damping="10">
             <site site="cable_anchor1" />
             <site site="cable_anchor2" />
             <site site="cable_anchor3" />
         </spatial>
-        <spatial name="cable2">
+        <spatial name="cable2" stiffness="250" damping="10">
             <site site="cable2_anchor1" />
             <site site="cable2_anchor2" />
             <site site="cable2_anchor3" />
@@ -69,13 +49,11 @@
     </tendon>
 
     <contact>
-        <pair geom1="segment2" geom2="segment3" />
+        <pair geom1="segment2" geom2="segment3"/>
     </contact>
 
-    <!-- attach actuators to joints -->
     <actuator>
-        <motor name="cable_motor" tendon="cable1" gear="750"/>
-        <motor name="cable_motor2" tendon="cable2" gear="750"/>
+        <motor name="cable_motor" tendon="cable1" gear="100"/>
+        <motor name="cable_motor2" tendon="cable2" gear="100"/>
     </actuator>
- 
 </mujoco>
