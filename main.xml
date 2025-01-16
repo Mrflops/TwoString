@@ -5,6 +5,22 @@
         <mesh file="TwoString1.STL" />
         <mesh file="TwoString2.STL" />
         <mesh file="TwoString3.STL" />
+        <mesh file="TwoString4.STL" />
+        <mesh file="TwoString5.STL" />
+        <mesh file="TwoString6.STL" />
+        <mesh file="TwoString7.STL" />
+        <mesh file="TwoString8.STL" />
+        <mesh file="TwoString9.STL" />
+        <mesh file="TwoString10.STL" />
+        <mesh file="TwoString11.STL" />
+        <mesh file="TwoString12.STL" />
+        <mesh file="TwoString13.STL" />
+        <mesh file="TwoString14.STL" />
+        <mesh file="TwoString15.STL" />
+        <mesh file="TwoString16.STL" />
+        <mesh file="TwoString17.STL" />
+        <mesh file="TwoString18.STL" />
+        <mesh file="TwoString19.STL" />
     </asset>
 
     <worldbody>
@@ -30,21 +46,182 @@
                     <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
                     <site name="cable_anchor3" pos="0 0.177578 0.489842" size="0.01" rgba="1 0 0 1"/>
                     <site name="cable2_anchor3" pos="0 -0.177578 0.489842" size="0.01" rgba="1 0 0 1"/>
+
+                    <!-- Placeholder for additional segments -->
+                    <body name="segment4" pos="0 0 0">
+                        <joint name="joint4" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                        <geom name="segment4" type="mesh" mesh="TwoString4" pos="0 0 0" contype="1" conaffinity="1"/>
+                        <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                        <site name="cable_anchor4" size="0.01" rgba="1 0 0 1"/>
+                        <site name="cable2_anchor4" size="0.01" rgba="1 0 0 1"/>
+
+                        <body name="segment5" pos="0 0 0">
+                            <joint name="joint5" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                            <geom name="segment5" type="mesh" mesh="TwoString5" pos="0 0 0" contype="1" conaffinity="1"/>
+                            <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                            <site name="cable_anchor5" size="0.01" rgba="1 0 0 1"/>
+                            <site name="cable2_anchor5" size="0.01" rgba="1 0 0 1"/>
+
+                            <body name="segment6" pos="0 0 0">
+                                <joint name="joint6" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                <geom name="segment6" type="mesh" mesh="TwoString6" pos="0 0 0" contype="1" conaffinity="1"/>
+                                <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                <site name="cable_anchor6" size="0.01" rgba="1 0 0 1"/>
+                                <site name="cable2_anchor6" size="0.01" rgba="1 0 0 1"/>
+
+                                <body name="segment7" pos="0 0 0">
+                                    <joint name="joint7" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                    <geom name="segment7" type="mesh" mesh="TwoString7" pos="0 0 0" contype="1" conaffinity="1"/>
+                                    <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                    <site name="cable_anchor7" size="0.01" rgba="1 0 0 1"/>
+                                    <site name="cable2_anchor7" size="0.01" rgba="1 0 0 1"/>
+
+                                    <body name="segment8" pos="0 0 0">
+                                        <joint name="joint8" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                        <geom name="segment8" type="mesh" mesh="TwoString8" pos="0 0 0" contype="1" conaffinity="1"/>
+                                        <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                        <site name="cable_anchor8" size="0.01" rgba="1 0 0 1"/>
+                                        <site name="cable2_anchor8" size="0.01" rgba="1 0 0 1"/>
+
+                                        <body name="segment9" pos="0 0 0">
+                                            <joint name="joint9" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                            <geom name="segment9" type="mesh" mesh="TwoString9" pos="0 0 0" contype="1" conaffinity="1"/>
+                                            <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                            <site name="cable_anchor9" size="0.01" rgba="1 0 0 1"/>
+                                            <site name="cable2_anchor9" size="0.01" rgba="1 0 0 1"/>
+
+                                            <body name="segment10" pos="0 0 0">
+                                                <joint name="joint10" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                <geom name="segment10" type="mesh" mesh="TwoString10" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                <site name="cable_anchor10" size="0.01" rgba="1 0 0 1"/>
+                                                <site name="cable2_anchor10" size="0.01" rgba="1 0 0 1"/>
+
+                                                <body name="segment11" pos="0 0 0">
+                                                    <joint name="joint11" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                    <geom name="segment11" type="mesh" mesh="TwoString11" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                    <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                    <site name="cable_anchor11" size="0.01" rgba="1 0 0 1"/>
+                                                    <site name="cable2_anchor11" size="0.01" rgba="1 0 0 1"/>
+
+                                                    <body name="segment12" pos="0 0 0">
+                                                        <joint name="joint12" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                        <geom name="segment12" type="mesh" mesh="TwoString12" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                        <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                        <site name="cable_anchor12" size="0.01" rgba="1 0 0 1"/>
+                                                        <site name="cable2_anchor12" size="0.01" rgba="1 0 0 1"/>
+
+                                                        <body name="segment13" pos="0 0 0">
+                                                            <joint name="joint13" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                            <geom name="segment13" type="mesh" mesh="TwoString13" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                            <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                            <site name="cable_anchor13" size="0.01" rgba="1 0 0 1"/>
+                                                            <site name="cable2_anchor13" size="0.01" rgba="1 0 0 1"/>
+
+                                                            <body name="segment14" pos="0 0 0">
+                                                                <joint name="joint14" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                                <geom name="segment14" type="mesh" mesh="TwoString14" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                                <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                                <site name="cable_anchor14" size="0.01" rgba="1 0 0 1"/>
+                                                                <site name="cable2_anchor14" size="0.01" rgba="1 0 0 1"/>
+
+                                                                <body name="segment15" pos="0 0 0">
+                                                                    <joint name="joint15" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                                    <geom name="segment15" type="mesh" mesh="TwoString15" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                                    <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                                    <site name="cable_anchor15" size="0.01" rgba="1 0 0 1"/>
+                                                                    <site name="cable2_anchor15" size="0.01" rgba="1 0 0 1"/>
+
+                                                                    <body name="segment16" pos="0 0 0">
+                                                                        <joint name="joint16" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                                        <geom name="segment16" type="mesh" mesh="TwoString16" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                                        <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                                        <site name="cable_anchor16" size="0.01" rgba="1 0 0 1"/>
+                                                                        <site name="cable2_anchor16" size="0.01" rgba="1 0 0 1"/>
+
+                                                                        <body name="segment17" pos="0 0 0">
+                                                                            <joint name="joint17" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                                            <geom name="segment17" type="mesh" mesh="TwoString17" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                                            <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                                            <site name="cable_anchor17" size="0.01" rgba="1 0 0 1"/>
+                                                                            <site name="cable2_anchor17" size="0.01" rgba="1 0 0 1"/>
+
+                                                                            <body name="segment18" pos="0 0 0">
+                                                                                <joint name="joint18" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                                                <geom name="segment18" type="mesh" mesh="TwoString18" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                                                <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                                                <site name="cable_anchor18" size="0.01" rgba="1 0 0 1"/>
+                                                                                <site name="cable2_anchor18" size="0.01" rgba="1 0 0 1"/>
+
+                                                                                <body name="segment19" pos="0 0 0">
+                                                                                    <joint name="joint19" type="ball" pos="0 0 0" stiffness="50" damping="5"/>
+                                                                                    <geom name="segment19" type="mesh" mesh="TwoString19" pos="0 0 0" contype="1" conaffinity="1"/>
+                                                                                    <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+                                                                                    <site name="cable_anchor19" size="0.01" rgba="1 0 0 1"/>
+                                                                                    <site name="cable2_anchor19" size="0.01" rgba="1 0 0 1"/>
+                                                                                </body>
+                                                                            </body>
+                                                                        </body>
+                                                                    </body>
+                                                                </body>
+                                                            </body>
+                                                        </body>
+                                                    </body>
+                                                </body>
+                                            </body>
+                                        </body>
+                                    </body>
+                                </body>
+                            </body>
+                        </body>
+                    </body>
                 </body>
             </body>
         </body>
     </worldbody>
-
     <tendon>
         <spatial name="cable1" stiffness="250" damping="10">
             <site site="cable_anchor1" />
             <site site="cable_anchor2" />
             <site site="cable_anchor3" />
+            <site site="cable_anchor4" />
+            <site site="cable_anchor5" />
+            <site site="cable_anchor6" />
+            <site site="cable_anchor7" />
+            <site site="cable_anchor8" />
+            <site site="cable_anchor9" />
+            <site site="cable_anchor10" />
+            <site site="cable_anchor11" />
+            <site site="cable_anchor12" />
+            <site site="cable_anchor13" />
+            <site site="cable_anchor14" />
+            <site site="cable_anchor15" />
+            <site site="cable_anchor16" />
+            <site site="cable_anchor17" />
+            <site site="cable_anchor18" />
+            <site site="cable_anchor19" />
         </spatial>
         <spatial name="cable2" stiffness="250" damping="10">
             <site site="cable2_anchor1" />
             <site site="cable2_anchor2" />
             <site site="cable2_anchor3" />
+            <site site="cable2_anchor4" />
+            <site site="cable2_anchor5" />
+            <site site="cable2_anchor6" />
+            <site site="cable2_anchor7" />
+            <site site="cable2_anchor8" />
+            <site site="cable2_anchor9" />
+            <site site="cable2_anchor10" />
+            <site site="cable2_anchor11" />
+            <site site="cable2_anchor12" />
+            <site site="cable2_anchor13" />
+            <site site="cable2_anchor14" />
+            <site site="cable2_anchor15" />
+            <site site="cable2_anchor16" />
+            <site site="cable2_anchor17" />
+            <site site="cable2_anchor18" />
+            <site site="cable2_anchor19" />
+
         </spatial>
     </tendon>
 
