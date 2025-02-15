@@ -2,6 +2,7 @@
     <compiler angle="radian" meshdir="C:\Users\secre\Documents\GitHub\TwoString\twoStringSTL"/>
 
     <asset>
+        <!-- All your meshes -->
         <mesh file="TwoString1.STL" />
         <mesh file="TwoString2.STL" />
         <mesh file="TwoString3.STL" />
@@ -21,13 +22,24 @@
         <mesh file="TwoString17.STL" />
         <mesh file="TwoString18.STL" />
         <mesh file="TwoString19.STL" />
+        <mesh file="asdfasdf.STL" scale="0.05 0.05 0.05" />
     </asset>
 
     <worldbody>
+        <!-- Light and floor -->
         <light directional="true" pos="-0.5 0.5 3" dir="0 0 -1" />
         <geom name="floor" pos="0 0 -0.2" size="1 1 1" type="plane" rgba="1 0.83 0.61 0.5"/>
 
+        <!-- 1) Coral in its own top-level body -->
+        <body name="asdfasdf" pos="0 0 1" euler="0 0 1.5708">
+            <geom name="coral" type="mesh" mesh="asdfasdf" pos="0 0 0" contype="1" conaffinity="1"/>
+            <inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+        </body>
+
+        <!-- 2) Entire chain in a separate top-level body -->
         <body name="base" pos="0 0 0.1">
+
+            <!-- segment1 -->
             <geom name="segment1" type="mesh" mesh="TwoString1" pos="0 0 0" contype="1" conaffinity="1"/>
             <inertial pos="0 0 0" mass="0.01" diaginertia="0.1 0.1 0.1"/>
             <site name="cable_anchor1" pos="0 0.215724 0.004246" size="0.01" rgba="1 0 0 1"/>
@@ -46,7 +58,7 @@
                     <inertial pos="0 0 0" mass="0.01" diaginertia="0.1 0.1 0.1"/>
                     <site name="cable_anchor3" pos="0 0.177578 0.489842" size="0.01" rgba="1 0 0 1"/>
                     <site name="cable2_anchor3" pos="0 -0.177578 0.489842" size="0.01" rgba="1 0 0 1"/>
-                    
+
                     <body name="segment4" pos="0 0 0">
                         <joint name="joint4" type="ball" pos="0 0 0.573951" stiffness="220" damping="5"/>
                         <geom name="segment4" type="mesh" mesh="TwoString4" pos="0 0 0" contype="1" conaffinity="1"/>
@@ -158,26 +170,27 @@
                                                                                     <inertial pos="0 0 0" mass="0.01" diaginertia="0.1 0.1 0.1"/>
                                                                                     <site name="cable_anchor19" pos="0 0.026804 2.41412" size="0.01" rgba="1 0 0 1"/>
                                                                                     <site name="cable2_anchor19" pos="0 -0.026804 2.41412" size="0.01" rgba="1 0 0 1"/>
-                                                                                </body>
-                                                                            </body>
-                                                                        </body>
-                                                                    </body>
-                                                                </body>
-                                                            </body>
-                                                        </body>
-                                                    </body>
-                                                </body>
-                                            </body>
-                                        </body>
-                                    </body>
-                                </body>
-                            </body>
-                        </body>
-                    </body>
-                </body>
-            </body>
-        </body>
+                                                                                </body> <!-- closes segment19 -->
+                                                                            </body> <!-- closes segment18 -->
+                                                                        </body> <!-- closes segment17 -->
+                                                                    </body> <!-- closes segment16 -->
+                                                                </body> <!-- closes segment15 -->
+                                                            </body> <!-- closes segment14 -->
+                                                        </body> <!-- closes segment13 -->
+                                                    </body> <!-- closes segment12 -->
+                                                </body> <!-- closes segment11 -->
+                                            </body> <!-- closes segment10 -->
+                                        </body> <!-- closes segment9 -->
+                                    </body> <!-- closes segment8 -->
+                                </body> <!-- closes segment7 -->
+                            </body> <!-- closes segment6 -->
+                        </body> <!-- closes segment5 -->
+                    </body> <!-- closes segment4 -->
+                </body> <!-- closes segment3 -->
+            </body> <!-- closes segment2 -->
+        </body> <!-- closes base -->
     </worldbody>
+
     <tendon>
         <spatial name="cable1" stiffness="200" damping="500">
             <site site="cable_anchor1" />
@@ -250,3 +263,4 @@
         <motor name="cable_motor2" tendon="cable2" gear="1500"/>
     </actuator>
 </mujoco>
+can you make the stiffness all the same (300) 
